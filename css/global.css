@@ -1,0 +1,20 @@
+body {
+  background-color: var(--cor-11);
+  margin: 0px;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+h1, p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1200px;
+}
