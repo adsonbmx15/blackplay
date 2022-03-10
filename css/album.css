@@ -1,0 +1,167 @@
+.album {
+  display: flex;
+  gap: 40px;
+  padding: 0 20px 20px 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  overflow-x: auto;
+  position: relative;
+}
+
+.album-item li {
+  flex: 1;  
+}
+
+.img {
+  border-radius: 25px;
+  min-width: 280px;
+}
+
+.album .al1 img {
+  border: 2px solid rgba(92, 18, 21, 0.5);
+  filter: drop-shadow(0px 1px 20px rgba(139, 31, 49, 0.2));
+}
+
+.album .al2 img {
+  border: 2px solid rgba(84, 61, 33, 0.5);
+  filter: drop-shadow(0px 1px 20px rgba(140, 9, 9, 0.2));
+}
+
+.album .al3 img {
+  border: 2px solid rgba(71, 30, 162, 0.5);
+  filter: drop-shadow(0px 1px 20px rgba(67, 28, 155, 0.2));
+}
+
+.album .al4 img {
+  border: 2px solid rgba(110, 158, 103, 0.5);
+  filter: drop-shadow(0px 1px 20px rgba(110, 158, 103, 0.2));
+}
+
+.album .al5 img {
+  border: 2px solid #385160;
+  filter: drop-shadow(0px 1px 20px rgba(56, 81, 96, 0.2));
+}
+
+.album-item{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.album-texto {
+  min-width: 190px;
+  padding: 32px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7px);
+  border-radius: 25px;
+  position: absolute;
+  top: 210px;
+}
+
+.album-texto h1{
+  text-align: center;
+}
+
+.album-texto, span{
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dec img{
+  top: -84px;
+  border-radius: 25px;
+  max-width: max-content;
+  height: 90px;
+  position: relative;
+  z-index: -1;
+}
+
+@media (max-width: 1200px) {
+  .album {
+    padding-top: 30px;
+  }
+  .img {
+    min-width: 200px;
+  }
+  .album-texto {
+    min-width: 150px;
+    padding: 20px;
+    top: 140px;
+    border-radius: 15px;
+  }
+  .dec img{ 
+    top: -88px;
+    max-width: 170px;
+  }
+  .album-texto h1 {
+    font-size: 1.25rem;
+    letter-spacing: 0.05rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .album {
+    padding-top: 10px;
+    gap: 20px;
+  }
+  .img {
+    min-width: 160px;
+  }
+  .album-texto {
+    min-width: 110px;
+    padding: 14px;
+    top: 110px;
+    border-radius: 15px;
+  }
+  .dec img{ 
+    top: -88px;
+    max-width: 150px;
+  }
+  .album-texto h1 {
+    font-size: 1rem;
+    letter-spacing: 0.08rem;
+  }
+  .album-texto span {
+    font-size: 0.7rem;
+    letter-spacing: 0.08rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .album {
+    gap: 10px;
+  }
+  .img {
+    min-width: 140px;
+  }
+  .album-texto {
+    padding: 10px;
+    top: 104px;
+    border-radius: 10px;
+  }
+  .dec img{
+    max-width: 100px;
+  }
+  .album-texto h1 {
+    font-size: .8rem;
+    letter-spacing: 0.08rem;
+  }
+  .album-texto span {
+    font-size: 0.5rem;
+    letter-spacing: 0.08rem;
+  }
+}
+
+@media (max-width: 380px){
+  .album-texto {
+    text-transform: lowercase;
+    backdrop-filter: blur(15px);
+  }
+}
