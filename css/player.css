@@ -1,52 +1,57 @@
-.player-position {
+.player-bg {
   position:fixed;
   bottom: 20px;
   left: 40px;
   right: 40px;
 }
 
-.player-bg {
-  background-color: rgba(29, 29, 31, 0.95);
-  max-width: 1200px;
-  border-radius: 25px;
-  height: 94px;
-  margin: 0 auto;
-  align-items: center;
-  position: relative;
-  padding-bottom: 10px;
-  z-index: -1;
-}
 .player {
   display: grid;
   grid-template-columns: 3fr 7fr 2fr;
   padding: 0px;
   align-items: center;
+  max-width: 1200px;
+  border-radius: 25px;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+  z-index: -1;
 }
 
-.player-previu .previu {
+.player-previu-grid {
+  padding-left: 40px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.previu {
   border: 2px solid rgba(144, 127, 245, 0.41);
   border-radius: 25px;
   filter: drop-shadow(0px 2px 6px rgba(144, 127, 245, 0.2));
-  width: 120px;
-  height: 120px;
-  left: 50px;
-  top: -10px;
-  position: absolute;
-  z-index: 2;
+  max-width: 120px;
+  height: 100%;
+  position: relative;
 }
 
-.player-previu .img-fundo{
-  border: 1px solid rgba(0, 0, 0, 0.18);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.18);
+.dec-ff {
+  content: '';
+  display: block;
+  background-color: rgba(29, 29, 31, 0.85);
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(7px);
+  border: 2px solid rgba(0, 0, 0, 0.18);
   border-radius: 25px;
-  filter: drop-shadow(0px 1.5px 5px rgba(245, 170, 127, 0.1));
-  width: 104px;
-  height: 104px;
-  left: 40px;
-  top: 0;
-  position: absolute;
+  max-width: 1200px;
+  border-radius: 25px;
+  margin: 0 auto;
+  height: 98px;
+  bottom: -114px;
+  position: relative;
   z-index: -1;
 }
+
+/* Player Pesquisa */
 
 .player-pesquisar {
   display: flex;
@@ -62,11 +67,7 @@
   height: 60px;
   border-radius: 0 15px 15px 0;
   filter: drop-shadow(0px 8px 32px rgba(144, 127, 245, 0.5));
-  position: absolute;
-  top: 20px;
-  left: 175px;
   z-index: -1;
-  bottom: 100px;
 }
 
 /* Controle de musica "Player Contro" */
@@ -77,8 +78,9 @@
   box-sizing: border-box;
   padding: 20px;
   max-width: max-content;
-  background: rgba(55, 54, 61, 0.3);
-  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.25);
+  background-color: rgba(29, 29, 31, 0.75);
+  /* background: rgba(55, 54, 61, 0.25); */
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(7px);
   position:absolute;
   bottom: -50px;
@@ -130,14 +132,11 @@
 }
 
 .botao {
-  content: '';
   display: block;
   background: var(--cor-p1);
   padding: 15px;
-  min-width: 60px;
-  min-height: 60px;
   border-radius: 15px;
   border: none;
-  width: 45px;
-  height: 45px;
+  height: 100%;
 }
+
