@@ -126,11 +126,13 @@
     max-width: 150px;
   }
   .album-texto h1 {
-    font-size: 1rem;
+    font-size: 0.875rem;
     letter-spacing: 0.08rem;
+    padding-bottom: 4px;
   }
   .album-texto span {
-    font-size: 0.7rem;
+    text-transform: lowercase;
+    font-size: 0.625rem;
     letter-spacing: 0.08rem;
   }
 }
@@ -151,7 +153,9 @@
     max-width: 100px;
   }
   .album-texto h1 {
-    font-size: .8rem;
+    font-size: .7rem;
+    padding-bottom: 2px;
+    text-transform: capitalize;
     letter-spacing: 0.08rem;
   }
   .album-texto span {

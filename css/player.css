@@ -393,11 +393,23 @@
     margin-bottom: 0px;
     border-radius: 10px;
   }
-  @media (max-width: 380px) {
+  @media (max-width: 250px) {
     .previu {
-      max-width: 28px;
+      max-width: 20px;
       margin-bottom: 0px;
-      border-radius: 10px;
+      border-radius: 8px;
+    }
+    .botao {
+      background: transparent;
+      padding: 6px;
+      max-width: 20px;
+      border-radius: 0px;
+    }
+    .player-time {
+      margin-top: 32px;
+    }
+    .player-previu {
+      display: none;
     }
   }
 }
