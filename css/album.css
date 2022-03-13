@@ -5,8 +5,8 @@
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 120px;
   padding-top: 60px;
+  padding-bottom: 60px;
   overflow-x: auto;
   position: relative;
 }
@@ -76,17 +76,19 @@
 }
 
 .dec img{
-  top: -84px;
+  bottom: -10px;
+  left: 35px;
   border-radius: 25px;
   max-width: max-content;
   height: 90px;
-  position: relative;
+  position:absolute;
   z-index: -1;
 }
 
 @media (max-width: 1200px) {
   .album {
     padding-top: 30px;
+    padding-bottom: 50px;
   }
   .img {
     min-width: 200px;
@@ -98,7 +100,8 @@
     border-radius: 15px;
   }
   .dec img{ 
-    top: -88px;
+    bottom: -8px;
+    left: 15px;
     max-width: 170px;
   }
   .album-texto h1 {
@@ -110,6 +113,7 @@
 @media (max-width: 800px) {
   .album {
     padding-top: 10px;
+    padding-bottom: 40px;
     gap: 20px;
   }
   .img {
@@ -122,8 +126,9 @@
     border-radius: 15px;
   }
   .dec img{ 
-    top: -88px;
-    max-width: 150px;
+    bottom: -6px;
+    left: 15px;
+    max-width: 130px;
   }
   .album-texto h1 {
     font-size: 0.875rem;
@@ -150,7 +155,9 @@
     border-radius: 10px;
   }
   .dec img{
-    max-width: 100px;
+    bottom: -4px;
+    left: 10px;
+    max-width: 120px;
   }
   .album-texto h1 {
     font-size: .7rem;
