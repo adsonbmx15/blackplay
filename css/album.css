@@ -1,3 +1,29 @@
+.album-lg {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+.album-lg h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.album-lg button a {
+  color: #7B798A;
+}
+
+.album-lg button {
+  font-family: 'Poppins';
+  font-size: 1rem;
+  font-weight: 400;
+  border: 0px;
+  color: #7B798A;
+  background: transparent;
+  cursor: pointer;
+}
+
 .album {
   display: flex;
   gap: 40px;
@@ -5,7 +31,7 @@
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 60px;
+  padding-top: 32px;
   padding-bottom: 60px;
   overflow-x: auto;
   position: relative;
@@ -66,8 +92,9 @@
   top: 210px;
 }
 
-.album-texto h1{
+.album-texto h3{
   text-align: center;
+  padding-bottom: 8px;
 }
 
 .album-texto, span{
@@ -104,7 +131,7 @@
     left: 15px;
     max-width: 170px;
   }
-  .album-texto h1 {
+  .album-texto h3 {
     font-size: 1.25rem;
     letter-spacing: 0.05rem;
   }
@@ -130,7 +157,7 @@
     left: 15px;
     max-width: 130px;
   }
-  .album-texto h1 {
+  .album-texto h3 {
     font-size: 0.875rem;
     letter-spacing: 0.08rem;
     padding-bottom: 4px;
@@ -159,7 +186,7 @@
     left: 10px;
     max-width: 120px;
   }
-  .album-texto h1 {
+  .album-texto h3 {
     font-size: .7rem;
     padding-bottom: 2px;
     text-transform: capitalize;
