@@ -70,5 +70,5 @@ table {
   display: grid;
   grid-template-columns: 1fr;
   margin: 0px auto;
-  max-width: 1200px;
+  max-width: 960px;
 }

@@ -1,8 +1,13 @@
+.album-bg {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .album-lg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 60px;
+  padding-top: 30px;
 }
 .album-lg h2 {
   font-size: 2rem;
@@ -25,62 +30,51 @@
 
 .album {
   display: flex;
-  gap: 40px;
-  padding: 0 20px 20px 20px;
-  max-width: 1400px;
+  gap: 60px 40px ;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 32px;
+  padding-left: 32px;
   padding-bottom: 60px;
   overflow-x: auto;
-  position: relative;
 }
 
-.album-item li {
-  flex: 1;  
-}
-
-.img {
-  border-radius: 25px;
-  min-width: 280px;
-}
-
-.album .al1 img {
-  border: 2px solid rgba(92, 18, 21, 0.5);
-  filter: drop-shadow(0px 1px 20px rgba(139, 31, 49, 0.2));
-}
-
-.album .al2 img {
-  border: 2px solid rgba(84, 61, 33, 0.5);
-  filter: drop-shadow(0px 1px 20px rgba(140, 9, 9, 0.2));
-}
-
-.album .al3 img {
-  border: 2px solid rgba(71, 30, 162, 0.5);
-  filter: drop-shadow(0px 1px 20px rgba(67, 28, 155, 0.2));
-}
-
-.album .al4 img {
-  border: 2px solid rgba(110, 158, 103, 0.5);
-  filter: drop-shadow(0px 1px 20px rgba(110, 158, 103, 0.2));
-}
-
-.album .al5 img {
-  border: 2px solid #385160;
-  filter: drop-shadow(0px 1px 20px rgba(56, 81, 96, 0.2));
-}
-
-.album-item{
+.album li {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+  justify-items: center;
+}
+
+.album li img {
+  flex: 1;
+  border-radius: 25px;
+  max-width: 220px;
+}
+
+.album-imagem .dec img {
+  max-width: 170px;
+}
+
+.album-imagem {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   position: relative;
 }
 
 .album-texto {
-  min-width: 190px;
-  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 54px;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   text-transform: uppercase;
   background-color: rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(0, 0, 0, 0.18);
@@ -88,118 +82,167 @@
   backdrop-filter: blur(7px);
   border-radius: 25px;
   position: absolute;
-  top: 210px;
+  bottom: 10px;
 }
 
-.album-texto h3{
-  text-align: center;
+.dec img {
+  flex: 1;
+  border-radius: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 160px;
+}
+
+.album-texto div h3 {
   padding-bottom: 8px;
 }
 
-.album-texto, span{
+.album-texto h3, 
+.album-texto p {
   text-align: center;
-  color: rgba(255, 255, 255, 0.5);
+  flex: 1;
 }
 
-.dec img{
+.dec {
+  position: absolute;
   bottom: -10px;
-  left: 35px;
-  border-radius: 25px;
-  max-width: max-content;
-  height: 90px;
-  position:absolute;
   z-index: -1;
 }
 
-@media (max-width: 1200px) {
-  .album {
-    padding-top: 30px;
-    padding-bottom: 50px;
-  }
-  .img {
-    min-width: 200px;
-  }
-  .album-texto {
-    min-width: 150px;
-    padding: 20px;
-    top: 140px;
-    border-radius: 15px;
-  }
-  .dec img{ 
-    bottom: -8px;
-    left: 15px;
-    max-width: 170px;
-  }
-  .album-texto h3 {
-    font-size: 1.25rem;
-    letter-spacing: 0.05rem;
+.al1 img  {
+  border: 2px solid rgba(92, 18, 21, 0.5);
+  filter: drop-shadow(0px 1px 20px rgba(139, 31, 49, 0.2));
+}
+
+.al2 img {
+  border: 2px solid rgba(84, 61, 33, 0.5);
+  filter: drop-shadow(0px 1px 20px rgba(140, 9, 9, 0.2));
+}
+
+.al3 img {
+  border: 2px solid rgba(71, 30, 162, 0.5);
+  filter: drop-shadow(0px 1px 20px rgba(67, 28, 155, 0.2));
+}
+
+.al4 img {
+  border: 2px solid rgba(110, 158, 103, 0.5);
+  filter: drop-shadow(0px 1px 20px rgba(110, 158, 103, 0.2));
+}
+
+.al5 img {
+  border: 2px solid #385160;
+  filter: drop-shadow(0px 1px 20px rgba(56, 81, 96, 0.2));
+}
+
+@media (max-width:1200px){
+  .album-lg {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width:1000px){
+  .album-lg h2 {
+    font-size: 1.75rem;
+  }
+  .album li img {
+    max-width: 190px;
+  }
+  .album-imagem .dec img {
+    max-width: 150px;
+  }
+  .album-texto {
+    padding: 20px 40px;
+  }
+  .dec {
+    bottom: -8px;
+  }
+}
+
+@media (max-width:800px){
   .album {
-    padding-top: 10px;
-    padding-bottom: 40px;
     gap: 20px;
   }
-  .img {
-    min-width: 160px;
+  .album li img {
+    max-width: 160px;
   }
-  .album-texto {
-    min-width: 110px;
-    padding: 14px;
-    top: 110px;
-    border-radius: 15px;
-  }
-  .dec img{ 
-    bottom: -6px;
-    left: 15px;
+  .album-imagem .dec img {
     max-width: 130px;
   }
-  .album-texto h3 {
-    font-size: 0.875rem;
-    letter-spacing: 0.08rem;
-    padding-bottom: 4px;
+  .album-texto {
+    padding: 15px 30px;
+    border-radius: 15px;
   }
-  .album-texto span {
-    text-transform: lowercase;
-    font-size: 0.625rem;
-    letter-spacing: 0.08rem;
+  .dec {
+    bottom: -6px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width:600px){
+  .album-lg {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .album-lg h2 {
+    font-size: 1.35rem;
+  }
+  .album-lg button a {
+    font-size: 0.85rem;
+  }
   .album {
     gap: 10px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  .img {
-    min-width: 140px;
+  .album li img {
+    max-width: 130px;
+  }
+  .album-imagem .dec img {
+    max-width: 100px;
   }
   .album-texto {
-    padding: 10px;
-    top: 104px;
-    border-radius: 10px;
-  }
-  .dec img{
-    bottom: -4px;
-    left: 10px;
-    max-width: 120px;
+    padding: 16px 22px;
+    border-radius: 15px;
   }
   .album-texto h3 {
-    font-size: .7rem;
-    padding-bottom: 2px;
-    text-transform: capitalize;
-    letter-spacing: 0.08rem;
+    font-size: 0.85rem;
   }
-  .album-texto span {
+  .album-texto p {
     font-size: 0.5rem;
-    letter-spacing: 0.08rem;
+  }
+  .dec {
+    bottom: -4px;
   }
 }
 
-@media (max-width: 380px){
+@media (max-width:380px){
+  .album-lg {
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+  .album {
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+  .album-lg {
+    padding-top: 20px;
+  }
+  .album-lg h2 {
+    font-size: 1rem;
+  }
+  .album-lg button a {
+    font-size: 0.75rem;
+  }
   .album-texto {
-    text-transform: lowercase;
-    backdrop-filter: blur(15px);
+    padding: 14px 30px;
+    border-radius: 15px;
+  }
+  .album-texto h3 {
+    font-size: 0.675rem;
+  }
+  .album-texto p {
+    font-size: 0.475rem;
   }
 }

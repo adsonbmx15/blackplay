@@ -26,15 +26,16 @@
 
 .album-interna {
   display: flex;
-  flex-wrap: wrap;
   gap: 60px 40px ;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 32px;
   padding-bottom: 60px;
-  justify-content: center;
-  align-items: center;
+}
+
+.pag {
+  flex-wrap: wrap;
 }
 
 .album-interna li {
@@ -49,7 +50,6 @@
 .album-interna li img {
   flex: 1;
   border-radius: 25px;
-  max-width: 260px;
 }
 
 .album-imagem-interna {
@@ -78,7 +78,7 @@
   bottom: 10px;
 }
 
-.album-interna li span img {
+.dec-interna img {
   flex: 1;
   border-radius: 25px;
   max-width: 220px;

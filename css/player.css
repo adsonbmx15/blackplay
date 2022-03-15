@@ -1,17 +1,16 @@
 .player-bg {
   position:fixed;
-  bottom: 20px;
+  bottom: 10px;
   left: 40px;
   right: 40px;
 }
 
 .player {
   display: grid;
-  grid-template-columns: 3fr 7fr 2fr;
+  grid-template-columns: 1fr 2fr 1fr;
   padding: 0px;
   align-items: center;
-  max-width: 1200px;
-  border-radius: 25px;
+  max-width: 900px;
   margin: 0 auto;
   align-items: center;
   position: relative;
@@ -19,7 +18,7 @@
 }
 
 .player-previu-grid {
-  margin-left: 40px;
+  margin-left: 20px;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -29,7 +28,7 @@
   border: 2px solid rgba(144, 127, 245, 0.41);
   border-radius: 25px;
   filter: drop-shadow(0px 2px 6px rgba(144, 127, 245, 0.2));
-  max-width: 120px;
+  max-width: 90px;
   height: 100%;
   position: relative;
 }
@@ -42,11 +41,11 @@
   backdrop-filter: blur(7px);
   border: 2px solid rgba(0, 0, 0, 0.18);
   border-radius: 25px;
-  max-width: 1200px;
+  max-width: 900px;
   border-radius: 25px;
   margin: 0 auto;
-  height: 98px;
-  bottom: -114px;
+  height: 70px;
+  bottom: -80px;
   position: relative;
   z-index: -1;
 }
@@ -56,16 +55,15 @@
 .player-pesquisar {
   display: flex;
   flex-wrap: nowrap;
-  gap: 20px;
-  padding: 15px;
+  gap: 14px;
+  padding: 10px 14px;
   align-items: center;
   justify-content: flex-end;
 }
 
 .player-pesquisar-bg {
   background-color: var(--cor-p1);
-  max-width: 189px;
-  height: 60px;
+  max-width: 90px;
   border-radius: 0 15px 15px 0;
   filter: drop-shadow(0px 8px 32px rgba(144, 127, 245, 0.5));
 }
@@ -74,17 +72,20 @@
 
 .play-container{
   display: flex;
-  gap: 10px;
+  gap: 20px;
   box-sizing: border-box;
-  padding: 20px;
-  max-width: max-content;
+  padding: 15px;
+  max-width: 220px;
   background-color: rgba(29, 29, 31, 0.75);
   box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(7px);
   position:absolute;
-  bottom: -50px;
+  bottom: -18px;
   border-radius: 15px;
-  left: 44%;
+}
+
+.play-container li a img {
+  max-width: 20px;
 }
 
 .player-contro-icon {
@@ -104,7 +105,8 @@
 .player-time {
   display: grid;
   gap: 10px;
-  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   align-content: center;
 }
 
@@ -120,7 +122,7 @@
   content: '';
   display: inline-block;
   min-width: 100%;
-  height: 10px;
+  height: 5px;
   background: var(--cor-5);
   border-radius: 5px;
   align-items: baseline;
@@ -136,85 +138,10 @@
 .botao {
   display: block;
   background: var(--cor-p1);
-  padding: 15px;
-  border-radius: 15px;
+  padding: 10px;
+  border-radius: 10px;
   border: none;
-  height: 100%;
-}
-
-@media (max-width: 1200px) {
-  .player-previu-grid {
-    margin-left: 20px;
-  }
-  .dec-ff {
-    height: 80px;
-    bottom: -95px;
-  }
-  .previu {
-    max-width: 100px;
-  }
-  .player-pesquisar {
-    padding: 10px;
-  }
-  .player-pesquisar-bg {
-    max-width: 110px;
-    height: max-content;
-  }
-  .botao {
-    padding: 15px;
-    max-width: 52px;
-  }
-  .play-container {
-  bottom: -30px;
-  border-radius: 15px;
-  left: 45%;
-  }
-}
-
-@media (max-width: 1000px) {
-  .player-time h2 {
-    margin-top: 8px;
-    font-size: 0.75rem;
-    padding-bottom: 10px;
-  }
-  .linha-tempo span {
-    font-size: 0.75rem;
-    padding-bottom: 10px;
-  }
-  .player-linha-tempo {
-    height: 5px;
-  }
-  .player-previu-grid {
-    margin-left: 20px;
-  }
-  .dec-ff {
-    height: 70px;
-    bottom: -80px;
-  }
-  .previu {
-    max-width: 80px;
-    margin-bottom: 8px;
-  }
-  .botao {
-    padding: 10px;
-    max-width: 42px;
-    border-radius: 10px;
-    margin-bottom: 6px;
-  }
-  .player-pesquisar-bg {
-    max-width: 110px;
-    height: 44px;
-    margin-bottom: 6px;
-  }
-  .player-pesquisar a img {
-    max-width: 24px;
-    height: 50%;
-  }
-  .play-container {
-    bottom: -14px;
-    border-radius: 15px;
-    left: initial;
-    }
+  max-width: 40px;
 }
 
 @media (max-width: 800px) {
@@ -230,49 +157,32 @@
   .player-pesquisar {
     display: none;
   }
-  .player-time h2 {
-    font-size: 0.75rem;
-    padding-bottom: 8px;
-  }
-  .linha-tempo span {
-    font-size: 0.75rem;
-    padding-bottom: 8px;
-  }
-  .player-linha-tempo {
-    height: 6px;
-  }
-  .play-container{
-    gap: 10px;
-    padding: 15px;
-    max-width: 240px;
-    bottom: -15px;
-    border-radius: 10px;
-  }
   .play-container li img{
     max-width: 24px;
+  }
+  .previu {
+    max-width: 60px;
+    border-radius: 20px;
+  }
+  .dec-ff {
+    height: 60px;
+    bottom: -60px;
+    border-radius: 25px;
+  }
+  .play-container{
+    bottom: -5px;
   }
 }
 
 @media (max-width: 600px) {
-  .player-time h2 {
-    font-size: 0.6rem;
-    padding-bottom: 8px;
-  }
-  .linha-tempo span {
-    font-size: 0.6rem;
-    padding-bottom: 8px;
-  }
-  .player-linha-tempo {
-    height: 5px;
-  }
   .previu {
-    max-width: 68px;
+    max-width: 40px;
     margin-bottom: 6px;
     border-radius: 15px;
   }
   .dec-ff {
-    height: 58px;
-    bottom: -68px;
+    height: 48px;
+    bottom: -44px;
     border-radius: 18px;
   }
   .botao {
@@ -285,7 +195,7 @@
     gap: 10px;
     padding: 10px;
     max-width: 160px;
-    bottom: -15px;
+    bottom: 5px;
     border-radius: 10px;
   }
   .play-container li img{
@@ -300,14 +210,6 @@
 }
 
 @media (max-width: 500px) {
-  .player-time h2 {
-    font-size: 0.5rem;
-    padding-bottom: 8px;
-  }
-  .linha-tempo span {
-    font-size: 0.5rem;
-    padding-bottom: 8px;
-  }
   .player-linha-tempo {
     height: 2px;
   }
@@ -317,18 +219,12 @@
     border-radius: 15px;
   }
   .dec-ff {
-    height: 40px;
-    bottom: -60px;
+    height: 50px;
+    bottom: -48px;
     border-radius: 14px;
   }
   .play-container{
-    bottom: -18px;
-  }
-  .player-bg {
-    bottom: -10px;
-  }
-  .botao {
-    margin-bottom: 4px;
+    bottom: -2px;
   }
 }
 @media (max-width: 380px) {
@@ -338,61 +234,40 @@
     max-width: 100%;
     left: 0px;
     right: 0px;
-    background-color: var(--cor-10);
+    /* background-color: rgba(29, 29, 31, 0.75);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(7px); */
   }
   .dec-ff {
-    display: none;
+    max-width: 100vh;
+    height: 90px;
+    bottom: -90px;
   }
   .player-previu-grid {
     margin-left: 0px;
     margin: 0 8px;
   }
   .player-time {
-    padding: 0px;
-    margin-top: 28px;
-    margin-bottom: 10px;
-  }
-  .player-time h2 {
-    margin-bottom: 8px;
-    font-size: 0.4rem;
-    grid-row: 1;
-    padding: 0px;
-    margin: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .play-container {
-    background-color: rgba(29, 29, 31, 0.0);
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
-    backdrop-filter: blur(0px);
-    bottom: -30px;
-    gap: 10px;
-    padding: 10px;
-    max-width: 130px;
-    border-radius: 0;
-  }
-  .player-linha-tempo,
-  .linha-tempo span {
-    padding-bottom: 0px;
-  }
-  .linha-tempo span {
-    font-size: 0.4rem;
+    bottom: -10px;
+    border-radius: 25;
   }
   .player-manu {
     padding-right: 0px ;
     margin-left: 0px;
     margin: 0 8px;
   }
-  .botao {
-    padding: 8px;
-    max-width: 24px;
-    border-radius: 8px;
-    margin-bottom: 0px;
-  }
   .previu {
     border: 1px solid rgba(144, 127, 245, 0.41);
-    max-width: 28px;
+    max-width: 40px;
     margin-bottom: 0px;
-    border-radius: 10px;
+    border-radius: 15px;
   }
   @media (max-width: 250px) {
     .previu {
@@ -402,9 +277,6 @@
     }
     .botao {
       background: transparent;
-      padding: 6px;
-      max-width: 20px;
-      border-radius: 0px;
     }
     .player-time {
       margin-top: 32px;
