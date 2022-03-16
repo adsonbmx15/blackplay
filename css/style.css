@@ -1,8 +1,9 @@
-@import url('./global.css');
-@import url('./cores.css');
-@import url('./font.css');
-@import url('./banner.css');
-@import url('./album.css');
-@import url('./player.css');
-@import url('./artista.css');
-@import url('./album/album-pag.css');
+@import url("./global.css");
+@import url("./banner.css");
+@import url("./font.css");
+@import url("./cores.css");
+@import url("./player.css");
+@import url("./album.css");
+@import url("./artista.css");
+@import url("./footer.css");
+@import url("./album/album-pag.css");
