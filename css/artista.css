@@ -1,0 +1,208 @@
+.titulo-artista {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+  color: #fff;
+  justify-content: space-between;
+}
+
+.titulo-artista h2 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--cor-1);
+}
+
+.titulo-artista button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.titulo-artista button a {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--cor-6);
+}
+
+
+.artistas {
+  display: flex;
+  gap: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+  overflow-x: auto;
+
+}
+
+.artista-bg {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 220px;
+  background-color: var(--cor-10);
+  border-radius: 25px;
+  padding: 15px;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.artista-bg:hover {
+  background-color: #242425;
+}
+
+.artista-img img {
+  max-width: 190px;
+  border-radius: 25px;
+  border: 2px solid rgba(119, 116, 116, .5);
+  box-shadow: 0px 1px 20px rgba(139, 31, 49, 0.2);
+  position: relative;
+}
+
+.artista-texto {
+  display: flex;
+  flex-wrap: wrap;
+  width: 150px;
+  background: rgba(55, 54, 61, 0.72);
+  border: 1px solid #4e4c57;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7px);
+  border-radius: 15px;
+  padding: 10px;
+  justify-content: center;
+  position: relative;
+  top: -24px;
+}
+
+.artista-texto h2 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  color: var(--cor-1);
+  margin-bottom: 8px;
+}
+
+.artista-texto p {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-size: 0.75rem;
+  color: var(--cor-4);
+  text-align: center;
+}
+
+.btn {
+  position: absolute;
+  bottom: -22px;
+  right: -8px;
+  padding: 13px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--cor-p1);
+  filter: drop-shadow(0px 8px 32px rgba(144, 127, 245, 0.5));
+}
+
+@media (max-width: 1200px){
+  .titulo-artista {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 1000px){
+  .artista-bg {
+    max-width: 190px;
+  }
+  .artista-img img {
+    max-width: 164px;
+  }
+}
+
+@media (max-width: 800px){
+  .artistas {
+    gap: 20px;
+  }
+  .artista-bg {
+    max-width: 160px;
+    height: 220px;
+  }
+  .artista-img img {
+    max-width: 138px;
+  }
+  .artista-texto {
+    width: 120px;
+  }
+  .artista-texto h2 {
+    font-size: 1rem;
+  }
+  .btn {
+    position: absolute;
+    bottom: -15px;
+    right: -8px;
+    padding: 12px;
+    max-width: 38px;
+  }
+}
+
+@media (max-width: 600px){
+  .titulo-artista {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .titulo-artista h2 {
+    font-size: 1.35rem;
+  }
+  .titulo-artista button a {
+    font-size: 0.85rem;
+  }
+  .artistas {
+    gap: 10px;
+    padding: 20px;
+  }
+  .artista-bg {
+    max-width: 130px;
+    height: 170px;
+    padding: 10px;
+  }
+  .artista-img img {
+    max-width: 110px;
+    border-radius: 16px;
+  }
+  .artista-texto {
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    width: 96px;
+    border-radius: 10px;
+  }
+  .artista-texto h2 {
+    font-size: 0.85rem;
+  }
+  .artista-texto p {
+    font-size: 0.625rem;
+    text-align: center;
+  }
+  .btn {
+    position: absolute;
+    bottom: -14px;
+    right: -4px;
+    padding: 8px;
+    max-width: 30px;
+  }
+}
+
+@media (max-width: 380px){
+  .titulo-artista h2 {
+    font-size: 1rem;
+  }
+  .titulo-artista button a {
+    font-size: 0.75rem;
+  }
+  .artistas {
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+}

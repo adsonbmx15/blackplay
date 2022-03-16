@@ -7,18 +7,14 @@
 .font-x-s {
   font-family: "Poppins";
   font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
 }
 
 .font-m-s {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-size: 0.625rem;
-  font-weight: 600;
 }
 
 .font-p-s {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.625rem;
-  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
 }

@@ -1,7 +1,8 @@
 body {
   background-color: var(--cor-11);
   margin: 0px;
-  height: 1200px;
+  height: 2200px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 img {
