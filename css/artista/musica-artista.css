@@ -50,7 +50,7 @@
 
 .lista-musica-reproducao {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 170px;
   margin: 0 20px;
   background: rgba(0, 0, 0, 0.25);
   border: 2px solid rgba(0, 0, 0, 0.18);
@@ -111,7 +111,7 @@
   align-items: center;
 }
 
-.m-playlista a img {
+.img-play-list-music img {
   max-width: 30px;
 }
 
@@ -130,10 +130,20 @@
   padding-bottom: 10px;
 }
 
+.mais-recentes li::after {
+  content: "";
+  display: block;
+  background-color: var(--cor-9);
+  width: 120px;
+  height: 1px;
+}
+
 .mais-recentes li a {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4px;
 }
 
 .mais-recentes h4 {
@@ -149,4 +159,101 @@
   font-size: 0.875rem;
   color: var(--cor-6);
   font-weight: 400;
+}
+
+@media (max-width: 800px) {
+  .lista-musica-img img {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .lista-musica-reproducao {
+    padding: 15px 30px;
+    gap: 10px;
+  }
+  .lista-musica-img h1 {
+    font-size: 2rem;
+  }
+  .lista-musica-img p {
+    font-size: 1rem;
+  }
+  .lista-musica-reproducao h2 {
+    font-size: 1.125rem;
+    letter-spacing: 0.1rem;
+  }
+  .mais-recentes h4 {
+    font-size: 1rem;
+  }
+  .m-playlista a h3 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .lista-musica-reproducao {
+    grid-template-columns: 1fr;
+  }
+  .mais-recentes ul {
+    max-width: initial;
+  }
+  .mais-recentes li a {
+    justify-content: space-between;
+  }
+  .mais-recentes li::after {
+    display: none;
+  }
+  .mais-recentes li {
+    background: var(--cor-9);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 2px;
+  }
+}
+
+@media (max-width: 500px) {
+  .lista-musica {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .lista-musica-reproducao {
+    padding: 15px 30px;
+    gap: 10px;
+    margin: 0 10px;
+  }
+  .lista-musica-img h1 {
+    font-size: 1.5rem;
+  }
+  .lista-musica-img p {
+    font-size: 0.875rem;
+  }
+  .lista-musica-reproducao h2 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .mais-recentes h4 {
+    font-size: 1rem;
+  }
+  .m-playlista a h3 {
+    font-size: 0.75rem;
+  }
+  .m-playlista a span {
+    font-size: 0.625rem;
+  }
+  .img-play-list-music img {
+    max-width: 24px;
+  }
+  .lista-musica-reproducao {
+    padding: 10px 20px;
+    border-radius: 15px;
+  }
+  .m-playlista a {
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .mais-recentes p {
+    font-size: 0.75rem;
+  }
+  .mais-recentes li {
+    padding: 6px;
+  }
 }
