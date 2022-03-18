@@ -1,0 +1,101 @@
+.btn-nav {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-nav button {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  background: var(--cor-p1);
+}
+
+.lista-interna-album {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.album-interna {
+  display: flex;
+  gap: 60px 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 32px;
+  padding-bottom: 60px;
+}
+
+.pag {
+  flex-wrap: wrap;
+}
+
+.album-interna li {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 260px;
+  align-items: flex-start;
+  justify-content: center;
+  justify-items: center;
+}
+
+.album-interna li img {
+  flex: 1;
+  border-radius: 25px;
+}
+
+.album-imagem-interna {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.album-texto-interna {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 54px;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7px);
+  border-radius: 25px;
+  position: absolute;
+  bottom: 10px;
+}
+
+.dec-interna img {
+  flex: 1;
+  border-radius: 25px;
+  max-width: 220px;
+}
+
+.album-texto-interna div h3 {
+  padding-bottom: 8px;
+}
+
+.album-texto-interna h3,
+.album-texto-interna p {
+  text-align: center;
+  flex: 1;
+}
+
+.dec-interna {
+  position: absolute;
+  bottom: -10px;
+  z-index: -1;
+}
