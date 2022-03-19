@@ -79,16 +79,21 @@
 }
 
 .m-playlista a {
-  background: rgba(55, 54, 61, 0.54);
-  border: 1px solid #37363d;
+  background: transparent;
+  border: 1px solid transparent;
   box-sizing: border-box;
-  border-radius: 15px;
+  border-radius: 10px;
   display: grid;
   gap: 10px;
   grid-template-columns: auto 2fr auto;
   max-width: 525px;
-  padding: 10px;
+  padding: 5px 10px;
   align-items: center;
+}
+
+.m-playlista a:hover {
+  background: rgba(55, 54, 61, 0.54);
+  border: 1px solid #37363d;
 }
 
 .m-playlista a h3 {
@@ -123,19 +128,18 @@
   display: flex;
   max-width: 204px;
   flex-direction: column;
-  padding: 15px;
+  padding: 10px;
 }
 
 .mais-recentes li {
-  padding-bottom: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background: transparent;
+  border-radius: 8px;
 }
 
-.mais-recentes li::after {
-  content: "";
-  display: block;
-  background-color: var(--cor-9);
-  width: 120px;
-  height: 1px;
+.mais-recentes li:hover {
+  background: var(--cor-10);
 }
 
 .mais-recentes li a {
@@ -143,7 +147,16 @@
   gap: 20px;
   align-items: center;
   justify-content: center;
-  padding-bottom: 4px;
+}
+
+.mais-recentes li a img {
+  padding: 3px;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.mais-recentes li a img:hover {
+  background: var(--cor-p1);
 }
 
 .mais-recentes h4 {
@@ -203,10 +216,13 @@
     display: none;
   }
   .mais-recentes li {
-    background: var(--cor-9);
-    border-radius: 5px;
+    background: transparent;
+    border-radius: 10px;
     padding: 10px;
     margin-bottom: 2px;
+  }
+  .mais-recentes li:hover {
+    background: var(--cor-9);
   }
 }
 
