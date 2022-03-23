@@ -31,7 +31,7 @@
 
 .album-lg button a:hover,
 .titulo-artista button a:hover {
-  color: var(--cor-p2);
+  color: var(--cor-p1);
 }
 
 .album {

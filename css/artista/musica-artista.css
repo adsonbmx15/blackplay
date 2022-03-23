@@ -75,32 +75,50 @@
 }
 
 .lista-musica-reproducao li {
-  padding-bottom: 2px;
+  margin-bottom: 2px;
 }
 
-.m-playlista a {
+.m-playlista {
   background: transparent;
   border: 1px solid transparent;
   box-sizing: border-box;
-  border-radius: 10px;
-  display: grid;
+  display: flex;
   gap: 10px;
-  grid-template-columns: auto 2fr auto;
   max-width: 525px;
   padding: 5px 10px;
   align-items: center;
+  justify-content: space-between;
 }
 
-.m-playlista a:hover {
+.m-playlista > div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.m-playlista > div a:nth-child(3) {
+  padding: 4px;
+}
+
+.m-playlista:hover {
   background: rgba(55, 54, 61, 0.54);
   border: 1px solid #37363d;
+  border-radius: 10px;
 }
 
 .m-playlista a h3 {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  color: var(--cor-1);
+  color: var(--cor-3);
   font-weight: 400;
+}
+
+.dec-text {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background: var(--cor-9);
+  display: block;
 }
 
 .m-playlista a span {
@@ -146,7 +164,7 @@
   display: flex;
   gap: 20px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .mais-recentes li a img {
@@ -162,15 +180,15 @@
 .mais-recentes h4 {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 1.125rem;
-  color: var(--cor-3);
+  color: var(--cor-2);
   font-weight: 400;
   padding-bottom: 20px;
 }
 
 .mais-recentes p {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  font-size: 0.875rem;
-  color: var(--cor-6);
+  font-size: 0.75rem;
+  color: var(--cor-5);
   font-weight: 400;
 }
 
@@ -202,7 +220,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 680px) {
   .lista-musica-reproducao {
     grid-template-columns: 1fr;
   }
@@ -249,11 +267,20 @@
   .mais-recentes h4 {
     font-size: 1rem;
   }
+  .m-playlista {
+    padding: 0px 5px;
+  }
   .m-playlista a h3 {
     font-size: 0.75rem;
   }
   .m-playlista a span {
     font-size: 0.625rem;
+  }
+  .m-minutos {
+    display: none;
+  }
+  .img-play-list-music {
+    gap: 4px;
   }
   .img-play-list-music img {
     max-width: 24px;
@@ -266,10 +293,41 @@
     padding: 5px;
     border-radius: 10px;
   }
+  .m-playlista a:nth-child(2) img {
+    min-width: 14px;
+  }
   .mais-recentes p {
     font-size: 0.75rem;
   }
   .mais-recentes li {
     padding: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .lista-musica-reproducao h2 {
+    margin-left: 10px;
+    padding-bottom: 8px;
+  }
+  .lista-musica-reproducao {
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .m-playlista a h3 {
+    font-size: 0.625rem;
+  }
+  .img-play-list-music {
+    flex-wrap: wrap;
+  }
+  .img-play-list-music img {
+    display: none;
+  }
+  .m-playlista a:nth-child(2) img {
+    min-width: 14px;
+  }
+  .m-playlista a span {
+    display: none;
   }
 }

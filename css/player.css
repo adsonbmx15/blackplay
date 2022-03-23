@@ -55,10 +55,21 @@
 .player-pesquisar {
   display: flex;
   flex-wrap: nowrap;
-  gap: 14px;
-  padding: 10px 14px;
+  gap: 6px;
+  padding: 5px 6px;
   align-items: center;
   justify-content: flex-end;
+}
+
+.player-pesquisar a {
+  background: transparent;
+  border-radius: 50%;
+  padding: 5px;
+  transition: 0.3s ease-in;
+}
+
+.player-pesquisar a:hover {
+  background: #8571fa;
 }
 
 .player-pesquisar-bg {
@@ -141,6 +152,11 @@
   border-radius: 10px;
   border: none;
   max-width: 40px;
+  transition: 0.3s ease-in;
+}
+
+.botao:hover {
+  background: #7d6aed;
 }
 
 @media (max-width: 800px) {

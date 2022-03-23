@@ -14,6 +14,10 @@
   height: 40px;
   border: none;
   border-radius: 50px;
+  background: var(--cor-p3);
+}
+
+.btn-nav button:hover {
   background: var(--cor-p1);
 }
 
