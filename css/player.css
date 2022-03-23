@@ -70,13 +70,13 @@
 
 .player-pesquisar a:hover {
   background: #8571fa;
+  filter: drop-shadow(0px 0px 16px rgba(144, 127, 245, 0.5));
 }
 
 .player-pesquisar-bg {
   background-color: var(--cor-p1);
   max-width: 90px;
   border-radius: 0 15px 15px 0;
-  filter: drop-shadow(0px 8px 32px rgba(144, 127, 245, 0.5));
 }
 
 /* Controle de musica "Player Contro" */
@@ -157,6 +157,7 @@
 
 .botao:hover {
   background: #7d6aed;
+  filter: drop-shadow(0px 4px 16px rgba(144, 127, 245, 0.5));
 }
 
 @media (max-width: 800px) {

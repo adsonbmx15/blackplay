@@ -76,6 +76,21 @@
 
 .lista-musica-reproducao li {
   margin-bottom: 2px;
+  position: relative;
+}
+
+.m-playlista::after {
+  content: "";
+  display: block;
+  width: 96%;
+  height: 1px;
+  background: var(--cor-10);
+  position: absolute;
+  bottom: -2px;
+}
+
+.m-playlista:last-child:after {
+  background: transparent;
 }
 
 .m-playlista {
@@ -87,6 +102,7 @@
   padding: 5px 10px;
   align-items: center;
   justify-content: space-between;
+  transition: 0.3s ease-in;
 }
 
 .m-playlista > div {
@@ -137,9 +153,22 @@
   max-width: 30px;
 }
 
+.coracao path {
+  fill: transparent;
+  stroke: #656370;
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+  transition: 0.3s ease-in;
+}
+
+.coracao path:hover {
+  fill: var(--cor-p1);
+  stroke-width: 0;
+}
+
 .mais-recentes ul {
-  background: rgba(55, 54, 61, 0.54);
-  border: 1px solid #37363d;
+  background: rgba(55, 54, 61, 0.25);
+  border: 1px solid #37363d57;
   box-sizing: border-box;
   border-radius: 15px;
   display: flex;
@@ -149,31 +178,42 @@
 }
 
 .mais-recentes li {
-  margin-bottom: 5px;
-  padding: 5px;
+  padding: 5px 5px 0px 5px;
   background: transparent;
   border-radius: 8px;
+  transition: 0.3s ease-in;
+}
+
+.mais-recentes li::after {
+  content: "";
+  display: block;
+  background: #2d2d30bf;
+  max-width: 100px;
+  height: 1px;
+  margin-top: 5px;
 }
 
 .mais-recentes li:hover {
-  background: var(--cor-10);
+  background: var(--cor-9);
 }
 
 .mais-recentes li a {
   display: flex;
-  gap: 20px;
   align-items: center;
   justify-content: space-between;
 }
 
 .mais-recentes li a img {
-  padding: 3px;
+  padding: 5px;
   background: transparent;
   border-radius: 50%;
+  min-width: 20px;
+  transition: 0.3s ease-in;
 }
 
 .mais-recentes li a img:hover {
   background: var(--cor-p1);
+  filter: drop-shadow(0px 0px 8px rgba(144, 127, 245, 0.5));
 }
 
 .mais-recentes h4 {
@@ -230,16 +270,14 @@
     justify-content: space-between;
   }
   .mais-recentes li::after {
-    display: none;
+    max-width: 100%;
   }
   .mais-recentes li {
-    background: transparent;
     border-radius: 10px;
-    padding: 10px;
     margin-bottom: 2px;
   }
-  .mais-recentes li:hover {
-    background: var(--cor-9);
+  .mais-recentes li a {
+    padding: 4px;
   }
 }
 
@@ -298,8 +336,8 @@
   .mais-recentes p {
     font-size: 0.75rem;
   }
-  .mais-recentes li {
-    padding: 6px;
+  .mais-recentes li a {
+    padding: 2px;
   }
 }
 
