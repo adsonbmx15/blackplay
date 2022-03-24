@@ -64,6 +64,12 @@
   top: -40px;
 }
 
+.container-over-y {
+  max-width: 600px;
+  height: 400px;
+  overflow-y: auto;
+}
+
 .lista-musica-reproducao h2 {
   flex: 1;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -224,6 +230,13 @@
   padding-bottom: 20px;
 }
 
+.text-recente {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
 .mais-recentes p {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 0.75rem;
@@ -278,6 +291,9 @@
   }
   .mais-recentes li a {
     padding: 4px;
+  }
+  .text-recente {
+    max-width: max-content;
   }
 }
 

@@ -83,10 +83,9 @@
 
 .play-container {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   box-sizing: border-box;
-  padding: 15px;
-  max-width: 220px;
+  padding: 10px 20px;
   background-color: rgba(29, 29, 31, 0.75);
   box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(7px);
@@ -95,8 +94,27 @@
   border-radius: 15px;
 }
 
-.play-container li a img {
-  max-width: 20px;
+.play-container li a svg {
+  padding: 5px;
+}
+
+.play-container li a svg rect {
+  transition: 0.2s ease-in;
+}
+
+.play-container li a svg rect:hover {
+  fill: #7d6aed;
+}
+
+.play-container li a svg {
+  background-color: transparent;
+  transition: 0.3s ease-in;
+}
+
+.play-container li a svg:hover {
+  background-color: rgba(209, 206, 252, 0.075);
+  filter: drop-shadow(0px 0px 16px rgba(144, 127, 245, 0.5));
+  border-radius: 50%;
 }
 
 .player-contro-icon {
@@ -146,6 +164,11 @@
 }
 
 .botao {
+  border: none;
+  background: transparent;
+}
+
+.botao a {
   display: block;
   background: var(--cor-p1);
   padding: 10px;
@@ -155,7 +178,7 @@
   transition: 0.3s ease-in;
 }
 
-.botao:hover {
+.botao a:hover {
   background: #7d6aed;
   filter: drop-shadow(0px 4px 16px rgba(144, 127, 245, 0.5));
 }
@@ -163,6 +186,7 @@
 @media (max-width: 800px) {
   .player {
     grid-template-columns: auto 1fr auto;
+    margin-bottom: 10px;
   }
   .player-previu-grid {
     grid-template-columns: 1fr;
@@ -173,9 +197,9 @@
   .player-pesquisar {
     display: none;
   }
-  .play-container li img {
+  /* .play-container li svg {
     max-width: 24px;
-  }
+  } */
   .previu {
     max-width: 60px;
     border-radius: 20px;
@@ -191,9 +215,12 @@
 }
 
 @media (max-width: 600px) {
+  .player-time {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .previu {
     max-width: 44px;
-    margin-bottom: 10px;
     border-radius: 15px;
   }
   .dec-ff {
@@ -201,16 +228,15 @@
     bottom: -50px;
     border-radius: 18px;
   }
-  .botao {
+  .botao a {
     padding: 8px;
     max-width: 34px;
-    border-radius: 10px;
-    margin-bottom: 12px;
   }
   .play-container {
     gap: 10px;
+    bottom: 0px;
   }
-  .play-container li img {
+  .play-container li svg {
     max-width: 100%;
   }
   .player-bg {
@@ -222,21 +248,26 @@
 }
 
 @media (max-width: 500px) {
+  .player-previu-grid {
+    margin-left: 14px;
+  }
   .player-linha-tempo {
     height: 2px;
   }
   .previu {
     max-width: 48px;
-    margin-bottom: 6px;
     border-radius: 15px;
   }
   .dec-ff {
-    height: 50px;
-    bottom: -48px;
+    height: 55px;
+    bottom: -51px;
     border-radius: 14px;
   }
   .play-container {
     bottom: -2px;
+  }
+  .player-manu {
+    padding-right: 8px;
   }
 }
 @media (max-width: 380px) {
@@ -265,7 +296,6 @@
 
   .play-container {
     bottom: -10px;
-    border-radius: 25;
   }
   .player-manu {
     padding-right: 0px;
@@ -284,7 +314,7 @@
       margin-bottom: 0px;
       border-radius: 8px;
     }
-    .botao {
+    .botao a {
       background: transparent;
     }
     .player-time {
